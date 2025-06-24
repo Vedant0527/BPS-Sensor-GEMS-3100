@@ -107,7 +107,7 @@ int main(void)
 	  	      readValue = HAL_ADC_GetValue(&hadc1);
 	  	      HAL_ADC_Stop(&hadc1);
 	  	      //voltage = ADC_to_Voltage(adc_value);
-	  	      float voltage = (readValue / 4095.0f) * 3.3f;
+	  	      float voltage = (readValue / 4096.0f) * 3.3f;
 	  	      voltage-=0.5;
 	  	      float pressure = (voltage / (0.825f)) * 100.0f;
 	  	      sprintf(msg, "ADC_Value = %d, V: %.2f V, P: %.2f bar \r\n", readValue, voltage, pressure);
